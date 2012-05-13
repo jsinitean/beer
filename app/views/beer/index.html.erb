@@ -1,0 +1,24 @@
+<div id="center">
+<div class="beer list">
+	<table class="beer-listing" summary="Beer list">
+		<tr class="sectionHeader">
+      <th>Name</th>
+      <th>Location</th>
+	  <th>Brewer</th>
+      <th>Category</th>
+      <th>Kyle?</th>
+      <th>Jeremy?</th>
+    </tr>
+    <% @beer.each do |beer| %>
+    <tr class="beer-list">
+	  <td><%= beer.name %></td>
+	  <td><i><%= beer.location %></i></td>
+	  <td><b><%= beer.brewer %></b></td>
+	  <td><%= beer.beer_type %></td>
+      <td class="center"><%= (beer.kyle) %></td>
+	  <td><%= beer.jeremy %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
+</div>
