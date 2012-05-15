@@ -1,4 +1,4 @@
-class BeerController < ApplicationController
+class PublicController < ApplicationController
   
   before_filter :index
   
