@@ -1,21 +1,21 @@
 <div id="center">
 <div class="beer list">
 	<%= link_to("Back to Incomplete Beers", {:controller => 'public', :action => 'index'}, :class => 'viewnext') %>
-	<table class="beer-listing" summary="Beer list">
-		<tr class="sectionHeader">
-      <th>Name</th>
-      <th>Beer Type</th>
-      <th>Brewer</th>
-      <th>Location</th>
-    </tr>
-    <% @beer.each do |beer| %>
-    <tr class="beer-list">
-	  <td><%= beer.name %></td>
-	  <td><b><%= beer.beer_type %></b></td>
-	  <td><b><%= beer.brewer %></b></td>
-      <td><i><%= beer.location %></i></td>
-    </tr>
-    <% end %>
-  </table>
+		<table class="beer-listing" summary="Beer list">
+	    <% @beer.each do |beer| %>
+	<tr class="beer-list">
+		<td>
+			<a id="displayText<%= beer.id %>" href="javascript:toggle<%= beer.id %>();"><%= beer.name %></a>
+			<div id="toggleText<%= beer.id %>" style="display: none">
+				</br></br>
+				<h3><%= beer.name %></br></h3>
+				<%= beer.beer_type %></br>
+				<b><%= beer.brewer %></b></br>
+			    <i><%= beer.location %></i>
+			</div>
+		</td>  
+	    </tr>
+	    <% end %>
+	  </table>
 </div>
 </div>

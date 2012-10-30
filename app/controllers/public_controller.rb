@@ -1,7 +1,7 @@
 class PublicController < ApplicationController
 
   before_filter :index
-
+ 
   def index
     @beer = BeerList.incomplete.sorted
   end
@@ -10,5 +10,4 @@ class PublicController < ApplicationController
     @beer = BeerList.completed.sorted
   end
   
-
 end

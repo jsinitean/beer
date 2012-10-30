@@ -94,14 +94,20 @@ span.status.false { background: red; color: red; }
 
 .beer-listing table {width: 762px; position:relative;}
 .beer-listing table tr td { border: 1px solid #666666; text-align: center; }
-.beer-listing td{padding: 6px; color:#555;}
+.beer-listing td {padding: 8px; color:#666666;} 
+
+a.clicky {
+	text-align: right; color:#555;  opacity:1; 
+    text-decoration: none; }
+a.clicky:hover { opacity:0.7; color:#555; text-decoration:none; }
+
 
 #back-button{width:762px; height:25px; }
 #addid{width:762px; height:25px; }
 
 a.back-link { padding: 5px 22px; margin: 0 0 0 0; position:absolute;
   background:url(/images/more2.gif) no-repeat 0 0 #AEAEAE; text-align: right; color:#555; width:32px; height:16px; opacity:0.6; 
-  text-decoration: none; font-size: 1em; text-indent: 11px; }
+  text-decoration: none;  text-indent: 11px; }
 a.back-link:hover { background:url(/images/more3.gif) no-repeat 0 0 #AEAEAE; opacity:0.7; color:#FFFFFF; text-decoration:none; }
 
 /* large action buttons */

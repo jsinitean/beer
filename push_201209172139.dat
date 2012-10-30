@@ -1,0 +1,1 @@
+{"klass":"Taps::Push","database_url":"mysql2://jeremy:chicago@127.0.0.1/beer_development?encoding=utf8","remote_url":"http://heroku:osui59a24am79x@taps19.heroku.com","session_uri":"/sessions/3991061909","stream_state":{},"completed_tables":["beer_lists"],"table_filter":null,"local_tables_info":{"beer_lists":94,"categories":94,"schema_migrations":4}}

@@ -13,18 +13,3 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-
-<script language="javascript"> 
-function toggle(showHideDiv, switchTextDiv) {
-	var ele = document.getElementById(showHideDiv);
-	var text = document.getElementById(switchTextDiv);
-	if(ele.style.display == "block") {
-    		ele.style.display = "none";
-		text.innerHTML = "show";
-  	}
-	else {
-		ele.style.display = "block";
-		text.innerHTML = "hide";
-	}
-} 
-</script>
