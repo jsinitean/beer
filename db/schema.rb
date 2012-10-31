@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20121029232905) do
     t.string   "brewer"
     t.string   "beer_type"
     t.boolean  "completed",  :default => false
-    t.boolean  "file",       :default => false
+    t.string  "file",       :default => false
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
   end
