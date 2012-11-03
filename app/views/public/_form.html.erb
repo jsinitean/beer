@@ -1,0 +1,31 @@
+<table summary="Ticket form fields">
+
+  <tr>
+    <th><%= f.label(:name, "Beer Name") %></th>
+	<td><%= f.text_field(:name) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:location, "Location") %></th>
+    <td><%= f.text_field(:location) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:beer_type, "Beer Type") %></th>
+    <td><%= f.text_field(:beer_type) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:brewer, "Brewer") %></th>
+    <td><%= f.text_field(:brewer) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:completed) %></th>
+    <td><%= f.check_box(:completed) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:file, "Image Name") %></th>
+    <td><%= f.text_field(:file, :size => "66x2") %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:notes, "Notes") %></th>
+    <td><%= f.text_area(:notes, :cols => 48, :rows => 4) %></td>
+  </tr>
+</table>

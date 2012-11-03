@@ -1,3 +1,4 @@
+<h2>Incomplete Beers</h2></br>
 <div id="back-link"><%= link_to("Show Completed Beers", {:controller => 'public', :action => 'complete'}, :class => 'viewnext') %></div>
 		<table class="beer-listing" summary="Beer list">
 			<% @beer.each do |beer| %>
@@ -25,7 +26,7 @@
 					<li><a id="displayText<%= beer.id %>" class="clicky" href="javascript:toggle<%= beer.id %>();"><%= beer.name %></a>
 					</li>
 					<div id="toggleText<%= beer.id %>" style="display: none">
-							<a href="/images/beerpics/<%= beer.file %>"><img src=/images/beerpics/<%= beer.file %>></a>
+							<a href="/public/show/<%= beer.id %>"><img src=/images/beerpics/<%= beer.file %>></a>
 								<ul>
 								<li><b><%= beer.brewer %></b></li>
 					    		<li><i><%= beer.location %></i></li>

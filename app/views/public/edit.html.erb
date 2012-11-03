@@ -1,0 +1,16 @@
+<div id="back-link"><%= link_to("Show Incompleted Beers", {:controller => 'public', :action => 'index'}, :class => 'viewnext') %></div>
+<div class="beer edit">
+<div class="menu">	
+  <h2>Update Beer</h2>
+</div>
+
+  <%= form_for(:beer, :url => {:action => 'update', :id => @beer.id}) do |f| %>
+  
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+    
+    <div class="form-buttons">
+      <%= submit_tag("Update Beer") %>
+    </div>
+    
+  <% end %>
+</div>

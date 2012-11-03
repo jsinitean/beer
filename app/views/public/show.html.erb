@@ -1,25 +1,30 @@
-<html>
-<head>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-	$.getJSON('http://search.twitter.com/search.json?q=mcgibbletsFantasy&lang=en&callback=?', function(data) {
-		var data = data.results;
-		var html = "<ul>";	
-		for(var i=0; i<data.length; i++) {
-	    	html += "<li><a href='http://twitter.com/" + data[i].from_user + "'>@" 
-                      + data[i].from_user + "</a>: " + data[i].text + "</li>";
-		}
-		html += "</ul>"
-    	$('.content').html(html);
-	});
-});
-</script>
+<div id="back-link"><%= link_to("Show Incompleted Beers", {:controller => 'public', :action => 'index'}, :class => 'viewnext') %></div>
 
-</head>
-<body>
-<h2>Twitter</h2>
-<div class="content">
+<div class="ticket show">
+  <h2><%= @beer.name %></h2></br>
+  <img src=/images/beerpics/<%= @beer.file %>></br>
+  <table summary="Team detail view">
+    <tr>
+      <th>Location</th>
+      <td><%= @beer.location %></td>
+    </tr>
+    <tr>
+      <th>Beer Type</th>
+      <td><%= @beer.beer_type %></td>
+    </tr>
+    <tr>
+      <th>Brewer</th>
+      <td><%= @beer.brewer %></td>
+    </tr>
+    <tr>
+      <th>Completed?</th>
+      <td><%= @beer.completed ? 'Yes' : 'No' %></td>
+    </tr>
+    <tr>
+      <th>Notes</th>
+      <td><%= @beer.notes %></td>
+    </tr>
+  </table>
+</br>
+<div id="back-link"><%= link_to("Edit Beer", {:action => 'edit', :id => @beer.id}, :class => 'viewnext') %></div>  
 </div>
-</body>
-</html>
