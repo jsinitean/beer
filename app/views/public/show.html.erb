@@ -17,8 +17,16 @@
       <td><%= @beer.brewer %></td>
     </tr>
     <tr>
+      <th>Difficulty</th>
+      <td><%= @beer.level %></td>
+    </tr>
+    <tr>
       <th>Completed?</th>
       <td><%= @beer.completed ? 'Yes' : 'No' %></td>
+    </tr>
+    <tr>
+      <th>Rating</th>
+      <td><%= @beer.rating %></td>
     </tr>
     <tr>
       <th>Notes</th>
