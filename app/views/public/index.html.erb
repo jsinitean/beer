@@ -1,4 +1,4 @@
-<h2>Incomplete Beers</h2></br>
+<h2>Incomplete Beers: <%= @beer.size %> Remaining</h2></br>
 <div id="back-link"><%= link_to("Show Completed Beers", {:controller => 'public', :action => 'complete'}, :class => 'viewnext') %></div>
 		<table class="beer-listing" summary="Beer list">
 			<% @beer.each do |beer| %>
@@ -31,7 +31,6 @@
 								<li><b><%= beer.brewer %></b></li>
 					    		<li><i><%= beer.location %></i></li>
 					    		<li><%= beer.beer_type %></li>
-								<li><%= link_to("Edit", {:controller => 'public', :action => 'edit', :id => beer.id}, :class => 'viewnext') %></li>
 								</ul>
 						</div>
 					
