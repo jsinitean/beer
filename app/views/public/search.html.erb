@@ -1,0 +1,12 @@
+<div id="topPanel">
+<div class="headone">World Beer Results</div>
+<div class="headinc"><%= @beer.size %></div>
+</div>
+<div id="back-link"><%= link_to("Back to Incomplete Beers", {:controller => 'public', :action => 'index'}, :class => 'viewnext') %></div>
+
+<div id="search">
+  <%= render :partial => 'public/search' %>
+</div>
+<div id="search">
+  <%= render :partial => 'public/search_results' %>
+</div>

@@ -9,4 +9,9 @@ class BeerList < ActiveRecord::Base
   scope :completed, where(:completed => true)
   scope :incomplete, where(:completed => false)
   
+  def self.search(search)
+    search_condition = "%" + search + "%"
+    find(:all, :conditions => ['name LIKE ? OR brewer LIKE ? OR location LIKE ? OR beer_type LIKE ?', search_condition, search_condition, search_condition, search_condition])
+  end
+  
 end

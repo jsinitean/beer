@@ -1,5 +1,13 @@
-<h2>Completed Beers: <%= @beer.size %> of 100</h2></br>
+<div id="topPanel">
+<div class="headone">World Beer Complete</div>
+<div class="headinc"><%= @beer.size %></div>
+</div>
 <div id="back-link"><%= link_to("Back to Incomplete Beers", {:controller => 'public', :action => 'index'}, :class => 'viewnext') %></div>
+
+<div id="search">
+  <%= render :partial => 'public/search' %>
+</div>
+
 		<center><table class="beer-listing" summary="Beer list">
 			<% @beer.each do |beer| %>
 

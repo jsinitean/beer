@@ -35,4 +35,8 @@ class PublicController < ApplicationController
     end
   end
   
+  def search
+    @beer = BeerList.search params[:search]
+  end
+  
 end
