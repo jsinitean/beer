@@ -11,7 +11,7 @@ class BeerList < ActiveRecord::Base
   
   def self.search(search)
     search_condition = "%" + search + "%"
-    find(:all, :conditions => ['name LIKE ? OR brewer LIKE ? OR location LIKE ? OR beer_type LIKE ?', search_condition, search_condition, search_condition, search_condition])
+    find(:all, :conditions => ['name ILIKE ? OR brewer ILIKE ? OR location ILIKE ? OR beer_type ILIKE ?', search_condition, search_condition, search_condition, search_condition])
   end
   
 end
