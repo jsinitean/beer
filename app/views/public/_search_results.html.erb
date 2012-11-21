@@ -3,8 +3,15 @@
 
 	<div id="links">
 		<ul class="table">
+			<li>
+			<% case beer.completed when false %>
+				    <img src=/images/redx.jpeg height="15" weight="15">
+			<% when true %>
+					<img src=/images/greencheck.jpeg height="15" weight="15">
+			<% end %>
+			</li>
 			<li class="clicky"><%= beer.name %></li>
-					<a href="/public/show/<%= beer.id %>"><img src=/images/beerpics/<%= beer.file %>></a>
+					<a href="/public/show/<%= beer.id %>"><img src=/images/beerpics/<%= beer.file %>  height="70" weight="70"></a>
 						<ul>
 						<li><b><%= beer.brewer %></b></li>
 			    		<li><i><%= beer.location %></i></li>

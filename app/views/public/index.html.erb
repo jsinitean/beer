@@ -34,7 +34,7 @@
 					<li><a id="displayText<%= beer.id %>" class="clicky" href="javascript:toggle<%= beer.id %>();"><%= beer.name %></a>
 					</li>
 					<div id="toggleText<%= beer.id %>" style="display: none">
-							<a href="/public/show/<%= beer.id %>"><img src=/images/beerpics/<%= beer.file %>></a>
+							<a href="/public/show/<%= beer.id %>"><img src=/images/beerpics/<%= beer.file %>  height="70" weight="70"></a>
 								<ul>
 								<li><b><%= beer.brewer %></b></li>
 					    		<li><i><%= beer.location %></i></li>
