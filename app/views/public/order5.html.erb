@@ -2,8 +2,8 @@
 <div class="headone">World Beer Challenge</div>
 <div class="headinc"><%= @beer.size %></div>
 </div>
-<div id="back-link"><%= link_to("Show Completed Beers", {:controller => 'public', :action => 'complete'}, :class => 'viewnext') %></div>
-
+<div id="back-link"><%= link_to("Back to Incomplete Beers", {:controller => 'public', :action => 'index'}, :class => 'viewnext') %></div>
+Difficulty: 5
 <div id="search">
   <%= render :partial => 'public/search' %>
 </div>

@@ -11,20 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130117023811) do
+ActiveRecord::Schema.define(:version => 20130117040439) do
 
   create_table "beer_lists", :force => true do |t|
     t.string   "name"
     t.string   "location"
     t.string   "brewer"
     t.string   "beer_type"
-    t.boolean  "completed",                :default => false
+    t.boolean  "completed",                                              :default => false
     t.string   "file",       :limit => 50
-    t.datetime "created_at",                                  :null => false
-    t.datetime "updated_at",                                  :null => false
+    t.datetime "created_at",                                                                :null => false
+    t.datetime "updated_at",                                                                :null => false
     t.string   "notes"
     t.integer  "level"
-    t.integer  "rating"
+    t.decimal  "rating",                   :precision => 6, :scale => 2
     t.string   "available"
   end
 
