@@ -8,10 +8,15 @@ class BeerList < ActiveRecord::Base
   scope :sorted, order('beer_lists.name ASC')
   scope :completed, where(:completed => true)
   scope :incomplete, where(:completed => false)
+  scope :one, where(:level => 1)
+  scope :two, where(:level => 2)
+  scope :three, where(:level => 3)
+  scope :four, where(:level => 4)
+  scope :five, where(:level => 5)    
   
   def self.search(search)
     search_condition = "%" + search + "%"
-    find(:all, :conditions => ['name ILIKE ? OR brewer ILIKE ? OR location ILIKE ? OR beer_type ILIKE ?', search_condition, search_condition, search_condition, search_condition])
+    find(:all, :conditions => ['name ILIKE ? OR brewer ILIKE ? OR location ILIKE ? OR beer_type ILIKE ? OR available ILIKE ?', search_condition, search_condition, search_condition, search_condition])
   end
   
 end

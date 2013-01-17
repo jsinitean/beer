@@ -6,6 +6,31 @@ class PublicController < ApplicationController
     @beer = BeerList.incomplete.sorted
     @beer_count = @beer.size
   end
+  
+  def order1
+    @beer = BeerList.incomplete.one.sorted
+    @beer_count = @beer.size
+  end
+
+  def order2
+    @beer = BeerList.incomplete.two.sorted
+    @beer_count = @beer.size
+  end
+  
+  def order3
+    @beer = BeerList.incomplete.three.sorted
+    @beer_count = @beer.size
+  end
+  
+  def order4
+    @beer = BeerList.incomplete.four.sorted
+    @beer_count = @beer.size
+  end
+  
+  def order5
+    @beer = BeerList.incomplete.five.sorted
+    @beer_count = @beer.size
+  end
 
   def complete
     @beer = BeerList.completed.sorted
