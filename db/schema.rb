@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121104164603) do
+ActiveRecord::Schema.define(:version => 20130117023811) do
 
   create_table "beer_lists", :force => true do |t|
     t.string   "name"
@@ -25,6 +25,13 @@ ActiveRecord::Schema.define(:version => 20121104164603) do
     t.string   "notes"
     t.integer  "level"
     t.integer  "rating"
+    t.string   "available"
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
