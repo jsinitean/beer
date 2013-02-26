@@ -2,6 +2,33 @@
 <div class="headone">World Beer Complete</div>
 <div class="headinc"><%= @beer.size %></div>
 </div>
+
+<% case @beer.size when 75 %>
+	    Only 25 to go, do not fuck this up
+<% when 90 %>
+		10 to go!
+<% when 91 %>
+		...9
+<% when 92 %>
+		...8
+<% when 93 %>
+		...7
+<% when 94 %>
+		...6
+<% when 95 %>
+		...5
+<% when 96 %>
+		...4
+<% when 97 %>
+		...3
+<% when 98 %>
+		...2
+<% when 99 %>
+		...1
+<% when 100 %>
+		<iframe width="420" height="315" src="http://www.youtube.com/embed/3GwjfUFyY6M?autoplay=1" frameborder="7" allowfullscreen></iframe>				
+<% end %>
+
 <div id="back-link"><%= link_to("Back to Incomplete Beers", {:controller => 'public', :action => 'index'}, :class => 'viewnext') %></div>
 
 <div id="search">
