@@ -6,7 +6,7 @@ class BeerList < ActiveRecord::Base
   validates_length_of :name, :maximum => 255
   
   scope :sorted, order('beer_lists.name ASC')
-  scope :favorite, order('beer_lists.rating DESC')
+  scope :favorite, order('beer_lists.rating DESC, beer_lists.name ASC')
   scope :completed, where(:completed => true)
   scope :incomplete, where(:completed => false)
   scope :one, where(:level => 1)
