@@ -6,6 +6,11 @@ class PublicController < ApplicationController
     @beer = BeerList.incomplete.sorted
     @beer_count = @beer.size
   end
+
+  def favorite
+    @beer = BeerList.completed.favorite
+    @beer_count = @beer.size
+  end
   
   def order1
     @beer = BeerList.incomplete.one.sorted

@@ -1,43 +1,16 @@
 <div id="topPanel">
-<div class="headone">World Beer Complete</div>
+<div class="headone">World Beer Challenge</div>
 <div class="headinc"><%= @beer.size %></div>
 </div>
-
-<% case @beer.size when 75 %>
-	    Only 25 to go, do not fuck this up
-<% when 90 %>
-		10 to go!
-<% when 91 %>
-		...9
-<% when 92 %>
-		...8
-<% when 93 %>
-		...7
-<% when 94 %>
-		...6
-<% when 95 %>
-		...5
-<% when 96 %>
-		...4
-<% when 97 %>
-		...3
-<% when 98 %>
-		...2
-<% when 99 %>
-		...1
-<% when 100 %>
-		<iframe width="420" height="315" src="http://www.youtube.com/embed/3GwjfUFyY6M?autoplay=1" frameborder="7" allowfullscreen></iframe>				
-<% end %>
-
-<div id="back-link"><%= link_to("Show Incomplete Beers", {:controller => 'public', :action => 'index'}, :class => 'viewnext') %></div>
+<div id="back-link"><%= link_to("Back to Complete Beers", {:controller => 'public', :action => 'complete'}, :class => 'viewnext') %></div>
 
 <div id="search">
   <%= render :partial => 'public/search' %>
 </div>
 <div id="back-link">
-<%= link_to("Order by Favorite", {:controller => 'public', :action => 'favorite'}, :class => 'viewnext') %>
+Favorites	
 </div>
-		<center><table class="beer-listing" summary="Beer list">
+		<table class="beer-listing" summary="Beer list">
 			<% @beer.each do |beer| %>
 
 			<script>
@@ -60,7 +33,7 @@
 
 			<div id="links">
 				<ul class="table">
-					<li><a id="displayText<%= beer.id %>" class="clicky" href="javascript:toggle<%= beer.id %>();"><%= beer.name %></a>
+					<li><a id="displayText<%= beer.id %>" class="clicky" href="javascript:toggle<%= beer.id %>();"><%= beer.name %> - <%= beer.rating %></a>
 					</li>
 					<div id="toggleText<%= beer.id %>" style="display: none">
 							<a href="/public/show/<%= beer.id %>"><img src=/images/beerpics/<%= beer.file %>  height="70" weight="70"></a>
@@ -74,4 +47,4 @@
 				</ul>
 			</div>
 	   <% end %>
-	  </table></center>
+	  </table>
